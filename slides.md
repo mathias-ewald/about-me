@@ -171,17 +171,17 @@ Person me = Person.Builder()
       </SlidevVideo>
     </template>
     <template #7>
-    <div style="display: flex; flex-direction: row; justify-content: center; align-items: start;">
-      <div style="position: relative; width: 400px; height: 250px;">
-        <img style="position: absolute; z-index: 0; width: 400px; left: 50%; top: 50%; transform: rotate(1deg) translate(-50%, -50%);" src="/meanstream.png">
+    <div style="margin-left: -300px; margin-top: 150px; display: flex; flex-direction: row; justify-content: center; align-items: start;">
+      <div style="position: relative; width: 700px; height: 250px;">
+        <img style="position: absolute; z-index: 0; width: 700px; left: 50%; top: 50%; transform: rotate(1deg) translate(-50%, -50%);" src="/meanstream.png">
       </div>
     </div>
     </template>
     <template #8>
-    <div style="display: flex; flex-direction: row; justify-content: center; align-items: start;">
-      <div style="position: relative; width: 400px; height: 250px;">
-        <img style="position: absolute; z-index: 0; width: 400px; left: 50%; top: 50%; transform: rotate(1deg) translate(-50%, -50%);" src="/meanstream.png">
-        <img style="position: absolute; z-index: 1; width: 400px; left: 50%; top: 50%; transform: rotate(-1deg) translate(-50%, -50%);" src="/flockai.png">
+    <div style="margin-left: -300px; margin-top: 150px; display: flex; flex-direction: row; justify-content: center; align-items: start;">
+      <div style="position: relative; width: 700px; height: 250px;">
+        <img style="position: absolute; z-index: 0; width: 700px; left: 50%; top: 50%; transform: rotate(1deg) translate(-50%, -50%);" src="/meanstream.png">
+        <img style="position: absolute; z-index: 1; width: 700px; left: 50%; top: 50%; transform: rotate(-1deg) translate(-50%, -50%);" src="/flockai.png">
       </div>
     </div>
     </template>
