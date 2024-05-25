@@ -17,17 +17,13 @@ layoutClass: gap-10
 ---
 
 <style>
-.slidev-layout {
-  padding: 0px !important;
-}
 .slidev-code {
-  margin-top: -4px !important;
   overflow-y: auto;
 }
 </style>
 
 ````md magic-move {at:1}
-```java {2-4|2-4}
+```java {2-4}
 Person me = Person.Builder()
   .firstname("Mathias")
   .lastname("Ewald")
@@ -93,7 +89,16 @@ Person me = Person.Builder()
   ))
   ...
 ```
-```java
+```java {3-6}
+Person me = Person.Builder()
+  ...
+  .hobbies(Set.of(
+    "Basketball",
+    "Running"
+  ))
+  ...
+```
+```java {7-10}
 Person me = Person.Builder()
   ...
   .hobbies(Set.of(
@@ -106,36 +111,81 @@ Person me = Person.Builder()
   ))
   ...
 ```
+```java {11-14|11-14}
+Person me = Person.Builder()
+  ...
+  .hobbies(Set.of(
+    "Basketball",
+    "Running"
+  ))
+  .interests(Set.of(
+    "AI/ML",
+    "ATEM" // Advanced Television Environment Manager
+  ))
+  .projects(Set.of(
+    "meanstream.io",
+    "Flock AI"
+  ))
+  ...
+```
 ````
 
 ::right::
 
 <div style="display: flex; flex-direction: column; justify-content: start; align-items: center; gap: 24px;">
 
-<v-click at="1">
 <img src="/me.png" width="200px" /> 
-</v-click>
 
 <v-switch>
-<template #1>
-<Arrow x1="400" y1="90" x2="650" y2="120"/>
+<template #0>
+<Arrow x1="490" y1="110" x2="650" y2="120"/>
 </template>
-<template #2>
-<Arrow x1="200" y1="170" x2="680" y2="230"/>
+<template #1>
+<Arrow x1="240" y1="200" x2="670" y2="270"/>
 <div style="display: flex; flex-direction: column; justify-content: start; align-items: center; gap: 24px;">
 <span style="background-color: #7c3f00; padding: 5px;">#7c3f00</span>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332104.0750265451!2d10.804097862440315!3d49.43607365304772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57aeb5b61cd3%3A0xdd5daf85a98c21b7!2sNuremberg%2C%20Germany!5e0!3m2!1sen!2sat!4v1716575105035!5m2!1sen!2sat" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </template>
-<template #3>
-<Arrow x1="270" y1="240" x2="580" y2="300"/>
+<template #2>
+<Arrow x1="320" y1="275" x2="550" y2="300"/>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42618.61740696384!2d16.8642414523324!3d48.116724970906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476cf5a1e636104b%3A0xb7ef635f6118f90b!2s2405%20Bad%20Deutsch-Altenburg!5e0!3m2!1sen!2sat!4v1716575589561!5m2!1sen!2sat" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </template>
+<template #3>
+  <Carousel width="400px" :interval="2000" :sources="['/private/20240414_192500.jpg', '/private/20240414_192529.jpg', '/private/20240424_192010.png', '/private/20240501_154311.jpg', '/private/20240504_170406.jpg', '/private/20240524_163017.jpg']"></Carousel>
+</template>
 <template #4>
-  <img src="" width="500px" height="300px" alt="Family Photo"/>
+  <Carousel width="400px" :interval="2000" :sources="['/private/20240414_192500.jpg', '/private/20240414_192529.jpg', '/private/20240424_192010.png', '/private/20240501_154311.jpg', '/private/20240504_170406.jpg', '/private/20240524_163017.jpg']"></Carousel>
 </template>
 <template #5>
-  <img src="" width="500px" height="300px" alt="Family Photo"/>
+  <div style="display: flex; flex-direction: row; gap: 10px; justify-content: center; align-items: start;">
+    <img src="/running.jpg" width="200px">
+    <img src="/bball.png" width="200px" height="100px">
+  </div>
+</template>
+<template #6>
+  <SlidevVideo autoplay style="width: 100%">
+    <source src="/switcher.hd.1080p.mp4" type="video/mp4" />
+    <p>
+      Your browser does not support videos. You may download it
+      <a href="/switcher.hd.1080p.mp4">here</a>.
+    </p>
+  </SlidevVideo>
+</template>
+<template #7>
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: start;">
+  <div style="position: relative; width: 400px; height: 250px;">
+    <img style="position: absolute; z-index: 0; width: 400px; left: 50%; top: 50%; transform: rotate(1deg) translate(-50%, -50%);" src="/meanstream.png">
+  </div>
+</div>
+</template>
+<template #8>
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: start;">
+  <div style="position: relative; width: 400px; height: 250px;">
+    <img style="position: absolute; z-index: 0; width: 400px; left: 50%; top: 50%; transform: rotate(1deg) translate(-50%, -50%);" src="/meanstream.png">
+    <img style="position: absolute; z-index: 1; width: 400px; left: 50%; top: 50%; transform: rotate(-1deg) translate(-50%, -50%);" src="/flockai.png">
+  </div>
+</div>
 </template>
 </v-switch>
 </div>
